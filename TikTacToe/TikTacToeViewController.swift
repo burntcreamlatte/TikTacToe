@@ -24,11 +24,13 @@ class TikTacToeViewController: UIViewController {
   @IBOutlet weak var eighthButton: UIButton!
   @IBOutlet weak var ninthButton: UIButton!
   
-  
+  // MARK: - Properties
   var xArray: Set<Int> = []
   var oArray: Set<Int> = []
   
   var turn: Bool = true
+  
+  var count = 0
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,10 +39,11 @@ class TikTacToeViewController: UIViewController {
   
   // TikTacToe Button Pressed
   @IBAction func tikTacButtonPressed(_ sender: UIButton) {
+    count += 1
     if turn {
       xArray.insert(sender.tag)
       sender.setImage(UIImage(named: "cross"), for: .normal)
-      print(xArray)
+      sender.isEnabled = false
       if checkForWinner(array: xArray) == true {
         wonLabel.text = "X Won!"
         turnLabel.text = ""
@@ -50,6 +53,7 @@ class TikTacToeViewController: UIViewController {
     } else {
       oArray.insert(sender.tag)
       sender.setImage(UIImage(named: "nought"), for: .normal)
+      sender.isEnabled = false
       if checkForWinner(array: oArray) {
         wonLabel.text = "O Won!"
         turnLabel.text = ""
@@ -64,8 +68,14 @@ class TikTacToeViewController: UIViewController {
     
     for combo in winningSet {
       if array.intersection(combo).sorted() == combo.sorted() {
+        enableOrDisableButtons(state: false)
         return true
       }
+    }
+
+    if count == 9 {
+      wonLabel.text = "Tie!"
+      turnLabel.text = ""
     }
     return false
   }
@@ -86,11 +96,16 @@ class TikTacToeViewController: UIViewController {
   }
   
   func newGame() {
+    count = 0
     xArray = []
     oArray = []
     turn = true
     turnLabel.text = "X's turn"
     wonLabel.text = ""
+    updateButtons()
+  }
+  
+  func updateButtons() {
     firstButton.setImage(nil, for: .normal)
     secondButton.setImage(nil, for: .normal)
     thirdButton.setImage(nil, for: .normal)
@@ -100,5 +115,18 @@ class TikTacToeViewController: UIViewController {
     seventhButton.setImage(nil, for: .normal)
     eighthButton.setImage(nil, for: .normal)
     ninthButton.setImage(nil, for: .normal)
+    enableOrDisableButtons(state: true)
+  }
+  
+  func enableOrDisableButtons(state: Bool) {
+    firstButton.isEnabled = state
+    secondButton.isEnabled = state
+    thirdButton.isEnabled = state
+    fourthButton.isEnabled = state
+    fifthButton.isEnabled = state
+    sixthButton.isEnabled = state
+    seventhButton.isEnabled = state
+    eighthButton.isEnabled = state
+    ninthButton.isEnabled = state
   }
 }

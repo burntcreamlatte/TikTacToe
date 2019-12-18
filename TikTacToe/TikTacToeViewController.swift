@@ -13,6 +13,16 @@ class TikTacToeViewController: UIViewController {
   // MARK: - Outlets
   @IBOutlet weak var turnLabel: UILabel!
   @IBOutlet weak var wonLabel: UILabel!
+  // Buttons
+  @IBOutlet weak var firstButton: UIButton!
+  @IBOutlet weak var secondButton: UIButton!
+  @IBOutlet weak var thirdButton: UIButton!
+  @IBOutlet weak var fourthButton: UIButton!
+  @IBOutlet weak var fifthButton: UIButton!
+  @IBOutlet weak var sixthButton: UIButton!
+  @IBOutlet weak var seventhButton: UIButton!
+  @IBOutlet weak var eighthButton: UIButton!
+  @IBOutlet weak var ninthButton: UIButton!
   
   
   var xArray: Set<Int> = []
@@ -29,7 +39,7 @@ class TikTacToeViewController: UIViewController {
   @IBAction func tikTacButtonPressed(_ sender: UIButton) {
     if turn {
       xArray.insert(sender.tag)
-      sender.setImage(.add, for: .normal)
+      sender.setImage(UIImage(named: "cross"), for: .normal)
       print(xArray)
       if checkForWinner(array: xArray) == true {
         wonLabel.text = "X Won!"
@@ -39,7 +49,7 @@ class TikTacToeViewController: UIViewController {
       }
     } else {
       oArray.insert(sender.tag)
-      sender.setImage(.checkmark, for: .normal)
+      sender.setImage(UIImage(named: "nought"), for: .normal)
       if checkForWinner(array: oArray) {
         wonLabel.text = "O Won!"
         turnLabel.text = ""
@@ -81,5 +91,14 @@ class TikTacToeViewController: UIViewController {
     turn = true
     turnLabel.text = "X's turn"
     wonLabel.text = ""
+    firstButton.setImage(nil, for: .normal)
+    secondButton.setImage(nil, for: .normal)
+    thirdButton.setImage(nil, for: .normal)
+    fourthButton.setImage(nil, for: .normal)
+    fifthButton.setImage(nil, for: .normal)
+    sixthButton.setImage(nil, for: .normal)
+    seventhButton.setImage(nil, for: .normal)
+    eighthButton.setImage(nil, for: .normal)
+    ninthButton.setImage(nil, for: .normal)
   }
 }

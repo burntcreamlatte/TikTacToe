@@ -29,24 +29,30 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wBB-Pb-bQa" secondAttribute="height" multiplier="1:1" id="atm-L8-rhs"/>
                                                 </constraints>
-
                                                 <state key="normal" title="1" image="cross"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YVG-PK-XBh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMt-gr-DVQ">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="bMt-gr-DVQ" secondAttribute="height" multiplier="1:1" id="w6K-Ny-Dht"/>
                                                 </constraints>
-
                                                 <state key="normal" title="2" image="cross"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VX-9D-Q4c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Dg-Yej">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jfA-Dg-Yej" secondAttribute="height" multiplier="1:1" id="kLS-bo-HtK"/>
                                                 </constraints>
-
                                                 <state key="normal" title="3" image="nought"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdj-GK-K9w"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -59,6 +65,9 @@
                                                     <constraint firstAttribute="width" secondItem="Su9-2O-9xf" secondAttribute="height" multiplier="1:1" id="IbK-88-jip"/>
                                                 </constraints>
                                                 <state key="normal" title="4" image="nought"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G60-IG-8dL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXi-2o-6Wc">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="108"/>
@@ -66,6 +75,9 @@
                                                     <constraint firstAttribute="width" secondItem="gXi-2o-6Wc" secondAttribute="height" multiplier="1:1" id="DbD-d1-nM1"/>
                                                 </constraints>
                                                 <state key="normal" title="5" image="cross"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0tY-v5-wCI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-ts-Q8b">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="108"/>
@@ -74,7 +86,7 @@
                                                 </constraints>
                                                 <state key="normal" title="6"/>
                                                 <connections>
-                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-2s-fOu"/>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKT-UO-C5e"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -88,6 +100,9 @@
                                                     <constraint firstAttribute="width" secondItem="p3h-1z-56y" secondAttribute="height" multiplier="1:1" id="zKb-JR-ywV"/>
                                                 </constraints>
                                                 <state key="normal" title="7" image="nought"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLi-Ga-dhD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-ik-ZVL">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
@@ -96,7 +111,7 @@
                                                 </constraints>
                                                 <state key="normal" title="8"/>
                                                 <connections>
-                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHe-qs-bm2"/>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88j-CF-uHy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9l-ol-mlm">
@@ -160,6 +175,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="eighthButton" destination="WFc-ik-ZVL" id="UXQ-c1-cdc"/>
+                        <outlet property="fifthButton" destination="gXi-2o-6Wc" id="htZ-54-OQ1"/>
+                        <outlet property="firstButton" destination="wBB-Pb-bQa" id="8eS-r0-NBf"/>
+                        <outlet property="fourthButton" destination="Su9-2O-9xf" id="XI2-6A-rug"/>
+                        <outlet property="ninthButton" destination="b9l-ol-mlm" id="lbg-c7-LIh"/>
+                        <outlet property="secondButton" destination="bMt-gr-DVQ" id="0HS-r8-Dzm"/>
+                        <outlet property="seventhButton" destination="p3h-1z-56y" id="Te7-kn-Twu"/>
+                        <outlet property="sixthButton" destination="XQp-ts-Q8b" id="N8R-Lp-SgK"/>
+                        <outlet property="thirdButton" destination="jfA-Dg-Yej" id="ZqU-m7-IYM"/>
                         <outlet property="turnLabel" destination="RJg-Ul-bM5" id="AyH-9O-DCW"/>
                         <outlet property="wonLabel" destination="FlC-5v-4ph" id="tzn-ax-7Oc"/>
                     </connections>

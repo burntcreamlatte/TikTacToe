@@ -102,28 +102,29 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRW-ux-Hub">
-                                <rect key="frame" x="138.66666666666669" y="797.33333333333337" width="136.66666666666669" height="36"/>
+                                <rect key="frame" x="138.66666666666669" y="795.33333333333337" width="136.66666666666669" height="40.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="New Game"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player won)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-5v-4ph">
-                                <rect key="frame" x="70.333333333333343" y="150.33333333333334" width="273.33333333333326" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="70.333333333333343" y="122.33333333333333" width="273.33333333333326" height="35.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player turn)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-Ul-bM5">
-                                <rect key="frame" x="70.333333333333343" y="82" width="273.33333333333326" height="62.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player turn)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJg-Ul-bM5">
+                                <rect key="frame" x="70.333333333333343" y="63.666666666666671" width="273.33333333333326" height="53.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RJg-Ul-bM5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="0r2-Cl-wcf"/>
-                            <constraint firstItem="FlC-5v-4ph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.03" id="6RM-pB-lTU"/>
+                            <constraint firstItem="RJg-Ul-bM5" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="0r2-Cl-wcf"/>
+                            <constraint firstItem="FlC-5v-4ph" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.04" id="6RM-pB-lTU"/>
                             <constraint firstItem="QP0-8p-Z6s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FFP-M4-ewl"/>
-                            <constraint firstItem="RJg-Ul-bM5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.25" id="Fj1-JZ-xlZ"/>
+                            <constraint firstItem="RJg-Ul-bM5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.2" id="Fj1-JZ-xlZ"/>
                             <constraint firstItem="RJg-Ul-bM5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="I4p-Td-XaY"/>
                             <constraint firstItem="dRW-ux-Hub" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.33" id="Ijn-W9-e3o"/>
                             <constraint firstItem="RJg-Ul-bM5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JB8-2g-qE5"/>
@@ -137,7 +138,7 @@
                             <constraint firstItem="dRW-ux-Hub" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.8" id="gFA-LC-Xrd"/>
                             <constraint firstItem="t6v-zl-OVl" firstAttribute="height" secondItem="QP0-8p-Z6s" secondAttribute="height" multiplier="1.1" id="gm5-GC-kul"/>
                             <constraint firstItem="t6v-zl-OVl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pzh-1a-Wtb"/>
-                            <constraint firstItem="dRW-ux-Hub" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.04" id="u4i-c1-umn"/>
+                            <constraint firstItem="dRW-ux-Hub" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.045" id="u4i-c1-umn"/>
                             <constraint firstItem="FlC-5v-4ph" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RJg-Ul-bM5" secondAttribute="leading" id="uVm-aP-Y28"/>
                             <constraint firstItem="FlC-5v-4ph" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ymZ-J3-9DJ"/>
                         </constraints>

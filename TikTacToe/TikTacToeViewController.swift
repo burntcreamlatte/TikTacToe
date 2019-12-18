@@ -45,6 +45,7 @@ class TikTacToeViewController: UIViewController {
       sender.setImage(UIImage(named: "cross"), for: .normal)
       sender.isEnabled = false
       if checkForWinner(array: xArray) == true {
+        showWinLabel()
         wonLabel.text = "X Won!"
         turnLabel.text = ""
       } else {
@@ -55,6 +56,7 @@ class TikTacToeViewController: UIViewController {
       sender.setImage(UIImage(named: "nought"), for: .normal)
       sender.isEnabled = false
       if checkForWinner(array: oArray) {
+        showWinLabel()
         wonLabel.text = "O Won!"
         turnLabel.text = ""
       } else {

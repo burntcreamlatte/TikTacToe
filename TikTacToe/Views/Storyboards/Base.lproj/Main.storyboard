@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,12 +79,11 @@
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0tY-v5-wCI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-ts-Q8b">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-ts-Q8b">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XQp-ts-Q8b" secondAttribute="height" multiplier="1:1" id="9iC-FU-QIe"/>
                                                 </constraints>
-                                                <state key="normal" title="6"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKT-UO-C5e"/>
                                                 </connections>
@@ -104,22 +103,20 @@
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLi-Ga-dhD"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-ik-ZVL">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-ik-ZVL">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WFc-ik-ZVL" secondAttribute="height" multiplier="1:1" id="QF3-kd-DZT"/>
                                                 </constraints>
-                                                <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="88j-CF-uHy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9l-ol-mlm">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9l-ol-mlm">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="b9l-ol-mlm" secondAttribute="height" multiplier="1:1" id="fyw-xP-1UY"/>
                                                 </constraints>
-                                                <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNg-dV-gly"/>
                                                 </connections>
@@ -195,7 +192,5 @@
     </scenes>
     <resources>
         <image name="boardbg" width="340" height="340"/>
-        <image name="cross" width="256" height="256"/>
-        <image name="nought" width="1600" height="1600"/>
     </resources>
 </document>

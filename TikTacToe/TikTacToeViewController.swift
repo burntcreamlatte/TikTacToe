@@ -71,15 +71,14 @@ class TikTacToeViewController: UIViewController {
     for combo in winningSet {
       if array.intersection(combo).sorted() == combo.sorted() {
         enableOrDisableButtons(state: false)
+        tie()
         return true
       }
     }
+    
+    tie()
+    showWinLabel()
 
-    if count == 9 {
-        showWinLabel()
-      wonLabel.text = "Tie!"
-      turnLabel.text = ""
-    }
     return false
   }
   
@@ -134,9 +133,17 @@ class TikTacToeViewController: UIViewController {
     ninthButton.isEnabled = state
   }
     
-    func showWinLabel() {
-        wonLabel.isHidden = false
-        wonLabel.layer.borderWidth = 2
-        wonLabel.layer.borderColor = UIColor.cyan.cgColor
+  func showWinLabel() {
+      wonLabel.isHidden = false
+      wonLabel.layer.borderWidth = 2
+      wonLabel.layer.borderColor = UIColor.cyan.cgColor
+  }
+
+  
+  func tie() {
+    if count == 9 {
+      wonLabel.text = "Tie!"
+      turnLabel.text = ""
     }
+  }
 }

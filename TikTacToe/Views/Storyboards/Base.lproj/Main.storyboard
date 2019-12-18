@@ -29,21 +29,18 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wBB-Pb-bQa" secondAttribute="height" multiplier="1:1" id="atm-L8-rhs"/>
                                                 </constraints>
-                                                <state key="normal" title="1"/>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMt-gr-DVQ">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="bMt-gr-DVQ" secondAttribute="height" multiplier="1:1" id="w6K-Ny-Dht"/>
                                                 </constraints>
-                                                <state key="normal" title="2"/>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Dg-Yej">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jfA-Dg-Yej" secondAttribute="height" multiplier="1:1" id="kLS-bo-HtK"/>
                                                 </constraints>
-                                                <state key="normal" title="3"/>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -55,21 +52,18 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Su9-2O-9xf" secondAttribute="height" multiplier="1:1" id="IbK-88-jip"/>
                                                 </constraints>
-                                                <state key="normal" title="4"/>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXi-2o-6Wc">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gXi-2o-6Wc" secondAttribute="height" multiplier="1:1" id="DbD-d1-nM1"/>
                                                 </constraints>
-                                                <state key="normal" title="5"/>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-ts-Q8b">
                                                 <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XQp-ts-Q8b" secondAttribute="height" multiplier="1:1" id="9iC-FU-QIe"/>
                                                 </constraints>
-                                                <state key="normal" title="6"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-2s-fOu"/>
                                                 </connections>
@@ -84,14 +78,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="p3h-1z-56y" secondAttribute="height" multiplier="1:1" id="zKb-JR-ywV"/>
                                                 </constraints>
-                                                <state key="normal" title="7"/>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-ik-ZVL">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="WFc-ik-ZVL" secondAttribute="height" multiplier="1:1" id="QF3-kd-DZT"/>
                                                 </constraints>
-                                                <state key="normal" title="8"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHe-qs-bm2"/>
                                                 </connections>
@@ -101,7 +93,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="b9l-ol-mlm" secondAttribute="height" multiplier="1:1" id="fyw-xP-1UY"/>
                                                 </constraints>
-                                                <state key="normal" title="9"/>
                                                 <connections>
                                                     <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNg-dV-gly"/>
                                                 </connections>

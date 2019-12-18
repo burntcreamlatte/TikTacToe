@@ -342,8 +342,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6W6ADR42Z;
-				INFOPLIST_FILE = "$(SRCROOT)/TikTacToe/Resources/Info.plist";
+				DEVELOPMENT_TEAM = 69Y2XBHVDM;
+				INFOPLIST_FILE = TikTacToe/Resources/Info.plist;
+
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,8 +363,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T6W6ADR42Z;
-				INFOPLIST_FILE = "$(SRCROOT)/TikTacToe/Resources/Info.plist";
+				DEVELOPMENT_TEAM = 69Y2XBHVDM;
+				INFOPLIST_FILE = TikTacToe/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -45,6 +45,7 @@ class TikTacToeViewController: UIViewController {
       sender.setImage(UIImage(named: "cross"), for: .normal)
       sender.isEnabled = false
       if checkForWinner(array: xArray) == true {
+        showWinLabel()
         wonLabel.text = "X Won!"
         turnLabel.text = ""
       } else {
@@ -55,6 +56,7 @@ class TikTacToeViewController: UIViewController {
       sender.setImage(UIImage(named: "nought"), for: .normal)
       sender.isEnabled = false
       if checkForWinner(array: oArray) {
+        showWinLabel()
         wonLabel.text = "O Won!"
         turnLabel.text = ""
       } else {
@@ -75,6 +77,8 @@ class TikTacToeViewController: UIViewController {
     }
     
     tie()
+    showWinLabel()
+
     return false
   }
   
@@ -99,6 +103,7 @@ class TikTacToeViewController: UIViewController {
     oArray = []
     turn = true
     turnLabel.text = "X's turn"
+    wonLabel.isHidden = true
     wonLabel.text = ""
     updateButtons()
   }
@@ -127,6 +132,13 @@ class TikTacToeViewController: UIViewController {
     eighthButton.isEnabled = state
     ninthButton.isEnabled = state
   }
+    
+  func showWinLabel() {
+      wonLabel.isHidden = false
+      wonLabel.layer.borderWidth = 2
+      wonLabel.layer.borderColor = UIColor.cyan.cgColor
+  }
+
   
   func tie() {
     if count == 9 {

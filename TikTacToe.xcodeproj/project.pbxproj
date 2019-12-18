@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27C4525F23AAACD200885FD8 /* TikTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4525E23AAACD200885FD8 /* TikTacToeViewController.swift */; };
 		ABDAD5C523AAA7F70022A73F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD5C423AAA7F70022A73F /* AppDelegate.swift */; };
 		ABDAD5C723AAA7F70022A73F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD5C623AAA7F70022A73F /* SceneDelegate.swift */; };
 		ABDAD5CC23AAA7F70022A73F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD5CA23AAA7F70022A73F /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27C4525E23AAACD200885FD8 /* TikTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TikTacToeViewController.swift; path = TikTacToe/TikTacToeViewController.swift; sourceTree = SOURCE_ROOT; };
 		ABDAD5C123AAA7F70022A73F /* TikTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDAD5C423AAA7F70022A73F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABDAD5C623AAA7F70022A73F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		ABDAD5DD23AAA82C0022A73F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27C4525E23AAACD200885FD8 /* TikTacToeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDAD5C523AAA7F70022A73F /* AppDelegate.swift in Sources */,
+				27C4525F23AAACD200885FD8 /* TikTacToeViewController.swift in Sources */,
 				ABDAD5C723AAA7F70022A73F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,15 +340,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = TikTacToe/Info.plist;
+				DEVELOPMENT_TEAM = T6W6ADR42Z;
+				INFOPLIST_FILE = "$(SRCROOT)/TikTacToe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shackelford.TikTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,15 +360,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69Y2XBHVDM;
-				INFOPLIST_FILE = TikTacToe/Info.plist;
+				DEVELOPMENT_TEAM = T6W6ADR42Z;
+				INFOPLIST_FILE = "$(SRCROOT)/TikTacToe/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = shackelford.TikTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,67 +10,76 @@ import UIKit
 
 class TikTacToeViewController: UIViewController {
   
-  var xArray: [Int] = []
-  var oArray: [Int] = []
+  // MARK: - Outlets
+  @IBOutlet weak var turnLabel: UILabel!
+  @IBOutlet weak var wonLabel: UILabel!
+  
+  
+  var xArray: Set<Int> = []
+  var oArray: Set<Int> = []
   
   var turn: Bool = true
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    newGame()
   }
   
   // TikTacToe Button Pressed
-  func buttonPressed(sender: UIButton) {
+  @IBAction func tikTacButtonPressed(_ sender: UIButton) {
     if turn {
-      xArray.append(sender.tag)
-      if checkForWinner(array: xArray) {
-        
+      xArray.insert(sender.tag)
+      sender.setImage(.add, for: .normal)
+      print(xArray)
+      if checkForWinner(array: xArray) == true {
+        wonLabel.text = "X Won!"
+        turnLabel.text = ""
       } else {
         changePlayer()
       }
     } else {
-      oArray.append(sender.tag)
+      oArray.insert(sender.tag)
+      sender.setImage(.checkmark, for: .normal)
       if checkForWinner(array: oArray) {
-        
+        wonLabel.text = "O Won!"
+        turnLabel.text = ""
       } else {
         changePlayer()
       }
     }
   }
   
-  func checkForWinner(array: [Int]) -> Bool {
-    let winningArrays = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7]]
-    var count = 0
-    for winningNumbers in winningArrays {
-      for number in winningNumbers {
-        if array.contains(number) {
-          count += 1
-        }
+  func checkForWinner(array: Set<Int>) -> Bool {
+    let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7]]
+    
+    for combo in winningSet {
+      if array.intersection(combo).sorted() == combo.sorted() {
+        return true
       }
     }
-    if count >= 3 {
-      return true
-    } else {
-      return false
-    }
+    return false
   }
   
   func changePlayer() {
     turn.toggle()
-    // TODO Update Label
     if turn {
-      // Player X
+      turnLabel.text = "X's turn"
     } else {
-      // Player O
+      turnLabel.text = "O's turn"
     }
   }
   
   // New Game Button Pressed
   
+  @IBAction func newGameButtonPressed(_ sender: UIButton) {
+    newGame()
+  }
+  
   func newGame() {
     xArray = []
     oArray = []
     turn = true
-    // TODO Update Label to Player X
+    turnLabel.text = "X's turn"
+    wonLabel.text = ""
   }
 }

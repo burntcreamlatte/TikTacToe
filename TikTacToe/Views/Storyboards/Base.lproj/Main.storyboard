@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tik Tac Toe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TikTacToeViewController" customModule="TikTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                                                     <constraint firstAttribute="width" secondItem="wBB-Pb-bQa" secondAttribute="height" multiplier="1:1" id="atm-L8-rhs"/>
                                                 </constraints>
                                                 <state key="normal" title="1" image="clear" catalog="system"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPM-4a-fub"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMt-gr-DVQ">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
@@ -34,13 +37,19 @@
                                                     <constraint firstAttribute="width" secondItem="bMt-gr-DVQ" secondAttribute="height" multiplier="1:1" id="w6K-Ny-Dht"/>
                                                 </constraints>
                                                 <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBa-GS-fe8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Dg-Yej">
-                                                <rect key="frame" x="231.66666666666663" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
+                                                <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jfA-Dg-Yej" secondAttribute="height" multiplier="1:1" id="kLS-bo-HtK"/>
                                                 </constraints>
                                                 <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sN0-4Q-mTI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -53,6 +62,9 @@
                                                     <constraint firstAttribute="width" secondItem="Su9-2O-9xf" secondAttribute="height" multiplier="1:1" id="IbK-88-jip"/>
                                                 </constraints>
                                                 <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ohb-Kg-tmp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXi-2o-6Wc">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="108"/>
@@ -60,18 +72,24 @@
                                                     <constraint firstAttribute="width" secondItem="gXi-2o-6Wc" secondAttribute="height" multiplier="1:1" id="DbD-d1-nM1"/>
                                                 </constraints>
                                                 <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Sq-02-Y1n"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-ts-Q8b">
-                                                <rect key="frame" x="231.66666666666663" y="0.0" width="107.66666666666666" height="108"/>
+                                                <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="108"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XQp-ts-Q8b" secondAttribute="height" multiplier="1:1" id="9iC-FU-QIe"/>
                                                 </constraints>
                                                 <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynk-2s-fOu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VF1-vC-UeC">
-                                        <rect key="frame" x="0.0" y="231.66666666666663" width="339.33333333333331" height="107.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="231.6666666666666" width="339.33333333333331" height="107.66666666666666"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3h-1z-56y">
                                                 <rect key="frame" x="0.0" y="0.0" width="107.66666666666667" height="107.66666666666667"/>
@@ -79,6 +97,9 @@
                                                     <constraint firstAttribute="width" secondItem="p3h-1z-56y" secondAttribute="height" multiplier="1:1" id="zKb-JR-ywV"/>
                                                 </constraints>
                                                 <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PFo-kc-s8s"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-ik-ZVL">
                                                 <rect key="frame" x="115.66666666666666" y="0.0" width="108" height="107.66666666666667"/>
@@ -86,13 +107,19 @@
                                                     <constraint firstAttribute="width" secondItem="WFc-ik-ZVL" secondAttribute="height" multiplier="1:1" id="QF3-kd-DZT"/>
                                                 </constraints>
                                                 <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHe-qs-bm2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9l-ol-mlm">
-                                                <rect key="frame" x="231.66666666666663" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
+                                                <rect key="frame" x="231.66666666666666" y="0.0" width="107.66666666666666" height="107.66666666666667"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="b9l-ol-mlm" secondAttribute="height" multiplier="1:1" id="fyw-xP-1UY"/>
                                                 </constraints>
                                                 <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="tikTacButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WNg-dV-gly"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -101,6 +128,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRW-ux-Hub">
                                 <rect key="frame" x="138.66666666666669" y="797.33333333333337" width="136.66666666666669" height="36"/>
                                 <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvD-V9-sce"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(player won)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlC-5v-4ph">
                                 <rect key="frame" x="70.333333333333343" y="150.33333333333334" width="273.33333333333326" height="27"/>
@@ -136,6 +166,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="turnLabel" destination="RJg-Ul-bM5" id="AyH-9O-DCW"/>
+                        <outlet property="wonLabel" destination="FlC-5v-4ph" id="tzn-ax-7Oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

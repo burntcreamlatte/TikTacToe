@@ -101,6 +101,7 @@ class TikTacToeViewController: UIViewController {
   }
   
   func newGame() {
+    buttonArray.forEach{$0.tintColor = .systemBlue}
     count = 0
     xArray = []
     oArray = []

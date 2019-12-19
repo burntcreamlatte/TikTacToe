@@ -32,8 +32,10 @@ class TikTacToeViewController: UIViewController {
   var oArray: Set<Int> = []
   
   var turn: Bool = true
-  
+
   var count = 0
+  
+  var timer: Timer?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -70,7 +72,6 @@ class TikTacToeViewController: UIViewController {
   
   func checkForWinner(array: Set<Int>) -> Bool {
     let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7], [4,5,6], [7,8,9]]
-    
     for combo in winningSet {
       if array.intersection(combo).sorted() == combo.sorted() {
         enableOrDisableButtons(state: false)
@@ -102,10 +103,11 @@ class TikTacToeViewController: UIViewController {
   }
   
   func newGame() {
-    buttonArray.forEach{$0.tintColor = .systemBlue}
-    count = 0
     xArray = []
     oArray = []
+    timer?.invalidate()
+    buttonArray.forEach{$0.tintColor = .systemBlue}
+    count = 0
     turn = true
     turnLabel.text = "X's turn"
     wonLabel.isHidden = true
@@ -139,9 +141,16 @@ class TikTacToeViewController: UIViewController {
   }
   
   func updateWinningButton(buttons: [Int]) {
-    for num in buttons {
-      buttonArray[num - 1].tintColor = .red
-    }
+ //   buttons.forEach {self.buttonArray[$0 - 1].tintColor = .red}
+    timer = Timer.scheduledTimer(withTimeInterval: 0.75, repeats: true, block: { (_) in
+      UIView.animate(withDuration: 1.0, animations: {
+        buttons.forEach {self.buttonArray[$0 - 1].tintColor = .clear}
+      }) { (finished) in
+        UIView.animate(withDuration: 1.0) {
+          buttons.forEach {self.buttonArray[$0 - 1].tintColor = .red}
+        }
+      }
+    })
   }
 }
 

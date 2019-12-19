@@ -86,6 +86,7 @@ class TikTacToeViewController: UIViewController {
   }
   
   func changePlayer() {
+    guard count != 9 else { return }
     turn.toggle()
     if turn {
       turnLabel.text = "X's turn"

@@ -68,20 +68,17 @@ class TikTacToeViewController: UIViewController {
   }
   
   func checkForWinner(array: Set<Int>) -> Bool {
-    let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7]]
+    let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7], [4,5,6], [7,8,9]]
     
     for combo in winningSet {
       if array.intersection(combo).sorted() == combo.sorted() {
         enableOrDisableButtons(state: false)
+        tie()
         return true
       }
     }
-
-    if count == 9 {
-        showWinLabel()
-      wonLabel.text = "Tie!"
-      turnLabel.text = ""
-    }
+    
+    tie()
     return false
   }
   
@@ -141,5 +138,12 @@ class TikTacToeViewController: UIViewController {
         wonLabel.layer.borderWidth = 2
         wonLabel.layer.cornerRadius = wonLabel.frame.height / 2
         wonLabel.layer.borderColor = UIColor.systemPink.cgColor
+  
+  func tie() {
+    if count == 9 {
+      showWinLabel()
+      wonLabel.text = "Tie!"
+      turnLabel.text = ""
     }
+  }
 }

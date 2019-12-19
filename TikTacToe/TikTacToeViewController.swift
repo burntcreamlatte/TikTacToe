@@ -52,7 +52,7 @@ class TikTacToeViewController: UIViewController {
         wonLabel.text = "X Won!"
         turnLabel.text = ""
       } else {
-        changePlayer()
+//        changePlayer()
       }
     } else {
       oArray.insert(sender.tag)
@@ -63,7 +63,7 @@ class TikTacToeViewController: UIViewController {
         wonLabel.text = "O Won!"
         turnLabel.text = ""
       } else {
-        changePlayer()
+//        changePlayer()
       }
     }
   }
@@ -75,7 +75,7 @@ class TikTacToeViewController: UIViewController {
       if array.intersection(combo).sorted() == combo.sorted() {
         enableOrDisableButtons(state: false)
         tie()
-        showWinLabel()
+//        showWinLabel()
         updateWinningButton(buttons: combo.sorted())
         return true
       }
@@ -97,7 +97,7 @@ class TikTacToeViewController: UIViewController {
   // New Game Button Pressed
   
   @IBAction func newGameButtonPressed(_ sender: UIButton) {
-    newGame()
+//    newGame()
   }
   
   func newGame() {
@@ -131,7 +131,7 @@ class TikTacToeViewController: UIViewController {
   
   func tie() {
     if count == 9 {
-      showWinLabel()
+//      showWinLabel()
       wonLabel.text = "Tie!"
       turnLabel.text = ""
     }

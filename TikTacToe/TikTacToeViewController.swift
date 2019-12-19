@@ -24,6 +24,8 @@ class TikTacToeViewController: UIViewController {
   @IBOutlet weak var eighthButton: UIButton!
   @IBOutlet weak var ninthButton: UIButton!
   
+  var buttonArray: [UIButton] = []
+  
   // MARK: - Properties
   var xArray: Set<Int> = []
   var oArray: Set<Int> = []
@@ -34,6 +36,7 @@ class TikTacToeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    buttonArray = [firstButton, secondButton, thirdButton, fourthButton, fifthButton, sixthButton, seventhButton, eighthButton, ninthButton]
     newGame()
   }
   
@@ -71,6 +74,7 @@ class TikTacToeViewController: UIViewController {
         enableOrDisableButtons(state: false)
         tie()
         showWinLabel()
+        updateWinningButton(buttons: combo.sorted())
         return true
       }
     }
@@ -107,28 +111,12 @@ class TikTacToeViewController: UIViewController {
   }
   
   func updateButtons() {
-    firstButton.setImage(nil, for: .normal)
-    secondButton.setImage(nil, for: .normal)
-    thirdButton.setImage(nil, for: .normal)
-    fourthButton.setImage(nil, for: .normal)
-    fifthButton.setImage(nil, for: .normal)
-    sixthButton.setImage(nil, for: .normal)
-    seventhButton.setImage(nil, for: .normal)
-    eighthButton.setImage(nil, for: .normal)
-    ninthButton.setImage(nil, for: .normal)
+    buttonArray.forEach {$0.setImage(nil, for: .normal)}
     enableOrDisableButtons(state: true)
   }
   
   func enableOrDisableButtons(state: Bool) {
-    firstButton.isEnabled = state
-    secondButton.isEnabled = state
-    thirdButton.isEnabled = state
-    fourthButton.isEnabled = state
-    fifthButton.isEnabled = state
-    sixthButton.isEnabled = state
-    seventhButton.isEnabled = state
-    eighthButton.isEnabled = state
-    ninthButton.isEnabled = state
+    buttonArray.forEach {$0.isEnabled = state}
   }
     
   func showWinLabel() {
@@ -142,6 +130,12 @@ class TikTacToeViewController: UIViewController {
     if count == 9 {
       wonLabel.text = "Tie!"
       turnLabel.text = ""
+    }
+  }
+  
+  func updateWinningButton(buttons: [Int]) {
+    for num in buttons {
+      buttonArray[num].tintColor = .red
     }
   }
 }

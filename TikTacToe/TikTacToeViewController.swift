@@ -9,141 +9,141 @@
 import UIKit
 
 class TikTacToeViewController: UIViewController {
-  
-  // MARK: - Outlets
-  @IBOutlet weak var turnLabel: UILabel!
-  @IBOutlet weak var wonLabel: UILabel!
-  // Buttons
-  @IBOutlet weak var firstButton: UIButton!
-  @IBOutlet weak var secondButton: UIButton!
-  @IBOutlet weak var thirdButton: UIButton!
-  @IBOutlet weak var fourthButton: UIButton!
-  @IBOutlet weak var fifthButton: UIButton!
-  @IBOutlet weak var sixthButton: UIButton!
-  @IBOutlet weak var seventhButton: UIButton!
-  @IBOutlet weak var eighthButton: UIButton!
-  @IBOutlet weak var ninthButton: UIButton!
-  
-  // MARK: - Properties
-  var xArray: Set<Int> = []
-  var oArray: Set<Int> = []
-  
-  var turn: Bool = true
-  
-  var count = 0
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    newGame()
-  }
-  
-  // TikTacToe Button Pressed
-  @IBAction func tikTacButtonPressed(_ sender: UIButton) {
-    count += 1
-    if turn {
-      xArray.insert(sender.tag)
-      sender.setImage(UIImage(named: "cross"), for: .normal)
-        //TODO; move to winning set
-        //sender.tintColor = .red
-      sender.isEnabled = false
-      if checkForWinner(array: xArray) == true {
-        showWinLabel()
-        wonLabel.text = "X Won!"
-        turnLabel.text = ""
-      } else {
-        changePlayer()
-      }
-    } else {
-      oArray.insert(sender.tag)
-      sender.setImage(UIImage(named: "nought"), for: .normal)
-      sender.isEnabled = false
-      if checkForWinner(array: oArray) {
-        showWinLabel()
-        wonLabel.text = "O Won!"
-        turnLabel.text = ""
-      } else {
-        changePlayer()
-      }
-    }
-  }
-  
-  func checkForWinner(array: Set<Int>) -> Bool {
-    let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7], [4,5,6], [7,8,9]]
     
-    for combo in winningSet {
-      if array.intersection(combo).sorted() == combo.sorted() {
-        enableOrDisableButtons(state: false)
+    // MARK: - Outlets
+    @IBOutlet weak var turnLabel: UILabel!
+    @IBOutlet weak var wonLabel: UILabel!
+    // Buttons
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    @IBOutlet weak var fourthButton: UIButton!
+    @IBOutlet weak var fifthButton: UIButton!
+    @IBOutlet weak var sixthButton: UIButton!
+    @IBOutlet weak var seventhButton: UIButton!
+    @IBOutlet weak var eighthButton: UIButton!
+    @IBOutlet weak var ninthButton: UIButton!
+    
+    // MARK: - Properties
+    var xArray: Set<Int> = []
+    var oArray: Set<Int> = []
+    
+    var turn: Bool = true
+    
+    var count = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        newGame()
+    }
+    
+    // TikTacToe Button Pressed
+    @IBAction func tikTacButtonPressed(_ sender: UIButton) {
+        count += 1
+        if turn {
+            xArray.insert(sender.tag)
+            sender.setImage(UIImage(named: "cross"), for: .normal)
+            sender.isEnabled = false
+            if checkForWinner(array: xArray) == true {
+                showWinLabel()
+                wonLabel.text = "X Won!"
+                turnLabel.text = ""
+            } else {
+                changePlayer()
+            }
+        } else {
+            oArray.insert(sender.tag)
+            sender.setImage(UIImage(named: "nought"), for: .normal)
+            sender.isEnabled = false
+            if checkForWinner(array: oArray) {
+                showWinLabel()
+                wonLabel.text = "O Won!"
+                turnLabel.text = ""
+            } else {
+                changePlayer()
+            }
+        }
+    }
+    
+    func checkForWinner(array: Set<Int>) -> Bool {
+        let winningSet: Set<Set<Int>> = [[1,2,3], [1,5,9], [1,4,7], [2,5,8], [3,6,9], [3,5,7], [4,5,6], [7,8,9]]
+        
+        for combo in winningSet {
+            if array.intersection(combo).sorted() == combo.sorted() {
+                enableOrDisableButtons(state: false)
+                tie()
+                return true
+            }
+        }
+        
         tie()
-        return true
-      }
+        return false
     }
     
-    tie()
-    return false
-  }
-  
-  func changePlayer() {
-    turn.toggle()
-    if turn {
-      turnLabel.text = "X's turn"
-    } else {
-      turnLabel.text = "O's turn"
+    func changePlayer() {
+        turn.toggle()
+        if turn {
+            turnLabel.text = "X's turn"
+        } else {
+            turnLabel.text = "O's turn"
+        }
     }
-  }
-  
-  // New Game Button Pressed
-  
-  @IBAction func newGameButtonPressed(_ sender: UIButton) {
-    newGame()
-  }
-  
-  func newGame() {
-    count = 0
-    xArray = []
-    oArray = []
-    turn = true
-    turnLabel.text = "X's turn"
-    wonLabel.isHidden = true
-    wonLabel.text = ""
-    updateButtons()
-  }
-  
-  func updateButtons() {
-    firstButton.setImage(nil, for: .normal)
-    secondButton.setImage(nil, for: .normal)
-    thirdButton.setImage(nil, for: .normal)
-    fourthButton.setImage(nil, for: .normal)
-    fifthButton.setImage(nil, for: .normal)
-    sixthButton.setImage(nil, for: .normal)
-    seventhButton.setImage(nil, for: .normal)
-    eighthButton.setImage(nil, for: .normal)
-    ninthButton.setImage(nil, for: .normal)
-    enableOrDisableButtons(state: true)
-  }
-  
-  func enableOrDisableButtons(state: Bool) {
-    firstButton.isEnabled = state
-    secondButton.isEnabled = state
-    thirdButton.isEnabled = state
-    fourthButton.isEnabled = state
-    fifthButton.isEnabled = state
-    sixthButton.isEnabled = state
-    seventhButton.isEnabled = state
-    eighthButton.isEnabled = state
-    ninthButton.isEnabled = state
-  }
+    
+    // New Game Button Pressed
+    
+    @IBAction func newGameButtonPressed(_ sender: UIButton) {
+        newGame()
+    }
+    
+    func newGame() {
+        count = 0
+        xArray = []
+        oArray = []
+        turn = true
+        turnLabel.text = "X's turn"
+        wonLabel.isHidden = true
+        wonLabel.text = ""
+        updateButtons()
+    }
+    
+    func updateButtons() {
+        firstButton.setImage(nil, for: .normal)
+        secondButton.setImage(nil, for: .normal)
+        thirdButton.setImage(nil, for: .normal)
+        fourthButton.setImage(nil, for: .normal)
+        fifthButton.setImage(nil, for: .normal)
+        sixthButton.setImage(nil, for: .normal)
+        seventhButton.setImage(nil, for: .normal)
+        eighthButton.setImage(nil, for: .normal)
+        ninthButton.setImage(nil, for: .normal)
+        enableOrDisableButtons(state: true)
+    }
+    
+    func enableOrDisableButtons(state: Bool) {
+        firstButton.isEnabled = state
+        secondButton.isEnabled = state
+        thirdButton.isEnabled = state
+        fourthButton.isEnabled = state
+        fifthButton.isEnabled = state
+        sixthButton.isEnabled = state
+        seventhButton.isEnabled = state
+        eighthButton.isEnabled = state
+        ninthButton.isEnabled = state
+    }
     
     func showWinLabel() {
         wonLabel.isHidden = false
         wonLabel.layer.borderWidth = 2
         wonLabel.layer.cornerRadius = wonLabel.frame.height / 2
         wonLabel.layer.borderColor = UIColor.systemPink.cgColor
-  
-  func tie() {
-    if count == 9 {
-      showWinLabel()
-      wonLabel.text = "Tie!"
-      turnLabel.text = ""
+        
     }
-  }
+    
+    func tie() {
+        if count == 9 {
+            showWinLabel()
+            wonLabel.text = "Tie!"
+            turnLabel.text = ""
+        }
+    }
 }

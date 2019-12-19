@@ -43,6 +43,8 @@ class TikTacToeViewController: UIViewController {
     if turn {
       xArray.insert(sender.tag)
       sender.setImage(UIImage(named: "cross"), for: .normal)
+        //TODO; move to winning set
+        //sender.tintColor = .red
       sender.isEnabled = false
       if checkForWinner(array: xArray) == true {
         showWinLabel()
@@ -137,6 +139,7 @@ class TikTacToeViewController: UIViewController {
     func showWinLabel() {
         wonLabel.isHidden = false
         wonLabel.layer.borderWidth = 2
-        wonLabel.layer.borderColor = UIColor.cyan.cgColor
+        wonLabel.layer.cornerRadius = wonLabel.frame.height / 2
+        wonLabel.layer.borderColor = UIColor.systemPink.cgColor
     }
 }
